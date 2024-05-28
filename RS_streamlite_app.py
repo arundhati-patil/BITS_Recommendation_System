@@ -36,7 +36,7 @@ def recommend(movie):
     return recommended_movie_names,recommended_movie_posters
 
 
-st.header(' VANI HANAMSHETTY Movie Recommender System')
+st.header(' Vani Hanamshetty's Movie Recommender System')
 movies = pickle.load(open('movie_list_1.pkl','rb'))
 similarity = pickle.load(open('similarity.pkl','rb'))
 
