@@ -36,7 +36,7 @@ def recommend(movie):
     return recommended_movie_names,recommended_movie_posters
 
 
-st.header(' Vani Hanamshetty Movie Recommender System')
+st.header(' Vani Hanamshetty's Movie Recommender System')
 movies = pickle.load(open('movie_list_1.pkl','rb'))
 similarity = pickle.load(open('similarity.pkl','rb'))
 
@@ -48,7 +48,7 @@ selected_movie = st.selectbox(
 
 if st.button('Show Recommendation'):
     recommended_movie_names,recommended_movie_posters = recommend(selected_movie)
-    col1, col2, col3, col4, col5, col6, col7 = st.columns(7)
+    col1, col2, col3, col4, col5 = st.columns(5)
     with col1:
         st.text(recommended_movie_names[0])
         st.image(recommended_movie_posters[0])
@@ -65,9 +65,4 @@ if st.button('Show Recommendation'):
     with col5:
         st.text(recommended_movie_names[4])
         st.image(recommended_movie_posters[4])
-    with col6:
-        st.text(recommended_movie_names[5])
-        st.image(recommended_movie_posters[5])
-    with col7:
-        st.text(recommended_movie_names[6])
-        st.image(recommended_movie_posters[6])
+    
